@@ -261,6 +261,7 @@
 - Refactored heavily the ticking of entity dynamic lighting to make it more abstract.
 - Refactored heavily how chunk rebuilds are queued and how dynamic light sources are represented.
 - Fixed API publication for loom-based setups.
+- Updated [SpruceUI].
 
 [SpruceUI]: https://github.com/LambdAurora/SpruceUI "SpruceUI page"
 [pridelib]: https://github.com/Queerbric/pridelib "Pridelib page"
