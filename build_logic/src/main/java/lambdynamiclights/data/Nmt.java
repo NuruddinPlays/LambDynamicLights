@@ -47,6 +47,10 @@ public final class Nmt extends ModBase<Nmt> {
 					.property("description", this.description)
 					.property("authors", String.join(", ", this.authors));
 
+			if (!this.contributors.isEmpty()) {
+				builder.property("credits", String.join(", ", this.contributors));
+			}
+
 			if (this.icon != null) {
 				builder.property("logoFile", this.icon);
 				builder.property("logoBlur", true);

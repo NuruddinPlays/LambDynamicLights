@@ -15,6 +15,8 @@ object Constants {
 
 	@JvmField
 	val AUTHORS = listOf("LambdAurora")
+	@JvmField
+	val CONTRIBUTORS = listOf("Akarys")
 	const val PROJECT_LINK = "https://lambdaurora.dev/projects/lambdynamiclights"
 	const val SOURCES_LINK = "https://github.com/LambdAurora/LambDynamicLights"
 	const val LICENSE = "Lambda License"

@@ -261,6 +261,9 @@
 - Refactored heavily the ticking of entity dynamic lighting to make it more abstract.
 - Refactored heavily how chunk rebuilds are queued and how dynamic light sources are represented.
 - Fixed API publication for loom-based setups.
+- Added Upside-down English translations ([#254](https://github.com/LambdAurora/LambDynamicLights/pull/254)).
+- Updated German translations ([#253](https://github.com/LambdAurora/LambDynamicLights/pull/253)).
+- Updated Italian translations ([#255](https://github.com/LambdAurora/LambDynamicLights/pull/255)).
 - Updated [SpruceUI].
 
 [SpruceUI]: https://github.com/LambdAurora/SpruceUI "SpruceUI page"

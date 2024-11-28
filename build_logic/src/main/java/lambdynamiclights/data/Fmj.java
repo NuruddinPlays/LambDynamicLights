@@ -134,6 +134,7 @@ public final class Fmj extends ModBase<Fmj> {
 			json.addProperty("version", src.version);
 			if (src.description != null) json.addProperty("description", src.description);
 			if (!src.authors.isEmpty()) json.add("authors", context.serialize(src.authors));
+			if (!src.contributors.isEmpty()) json.add("contributors", context.serialize(src.contributors));
 			if (src.contact != null) json.add("contact", context.serialize(src.contact));
 			if (src.license != null) json.addProperty("license", src.license);
 			if (src.icon != null) json.addProperty("icon", src.icon);

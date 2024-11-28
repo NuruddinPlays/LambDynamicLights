@@ -21,6 +21,7 @@ val generateFmj = tasks.register("generateFmj", GenerateFmjTask::class) {
 		Fmj(Constants.NAMESPACE, Constants.PRETTY_NAME, project.version.toString())
 			.withDescription(Constants.DESCRIPTION)
 			.withAuthors(Constants.AUTHORS)
+			.withContributors(Constants.CONTRIBUTORS)
 			.withContact {
 				it.withHomepage(Constants.PROJECT_LINK)
 					.withSources(Constants.SOURCES_LINK)

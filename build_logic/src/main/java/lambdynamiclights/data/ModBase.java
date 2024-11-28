@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 public class ModBase<SELF extends ModBase<SELF>> extends ModShell<SELF> {
 	protected final String version;
 	protected final List<String> authors = new ArrayList<>();
+	protected final List<String> contributors = new ArrayList<>();
 	protected Contact contact;
 	protected String license;
 
@@ -28,6 +29,15 @@ public class ModBase<SELF extends ModBase<SELF>> extends ModShell<SELF> {
 
 	public SELF withAuthors(String... authors) {
 		return this.withAuthors(Arrays.asList(authors));
+	}
+
+	public SELF withContributors(List<String> contributors) {
+		this.contributors.addAll(contributors);
+		return this.$self();
+	}
+
+	public SELF withContributors(String... contributors) {
+		return this.withContributors(Arrays.asList(contributors));
 	}
 
 	private Contact useContact() {
