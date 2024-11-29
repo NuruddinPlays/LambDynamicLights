@@ -15,6 +15,7 @@ import dev.lambdaurora.lambdynlights.api.DynamicLightsInitializer;
 import dev.lambdaurora.lambdynlights.api.behavior.DynamicLightBehaviorManager;
 import dev.lambdaurora.lambdynlights.api.entity.EntityLightSourceManager;
 import dev.lambdaurora.lambdynlights.api.item.ItemLightSourceManager;
+import dev.lambdaurora.lambdynlights.compat.CompatLayer;
 import dev.lambdaurora.lambdynlights.engine.DynamicLightBehaviorSources;
 import dev.lambdaurora.lambdynlights.engine.DynamicLightingEngine;
 import dev.lambdaurora.lambdynlights.engine.source.DeferredDynamicLightSource;
@@ -508,6 +509,16 @@ public class LambDynLights implements ClientModInitializer, DynamicLightsContext
 		for (var equipped : entity.getAllSlots()) {
 			if (!equipped.isEmpty())
 				luminance = Math.max(luminance, INSTANCE.itemLightSources.getLuminance(equipped, submergedInFluid));
+		}
+
+		if (luminance < 15) {
+			for (var compat : CompatLayer.LAYERS) {
+				luminance = Math.max(luminance, compat.getLivingEntityLuminanceFromItems(INSTANCE.itemLightSources, entity, submergedInFluid));
+
+				if (luminance == 15) {
+					break;
+				}
+			}
 		}
 
 		return luminance;

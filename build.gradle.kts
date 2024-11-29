@@ -48,6 +48,11 @@ repositories {
 		name = "ParchmentMC"
 		url = uri("https://maven.parchmentmc.org")
 	}
+	maven {
+		name = "Ladysnake Libs"
+		url = uri("https://maven.ladysnake.org/releases")
+	}
+	maven { url = uri("https://maven.wispforest.io/releases") }
 }
 
 loom {
@@ -72,6 +77,10 @@ dependencies {
 	modImplementation(libs.modmenu) {
 		this.isTransitive = false
 	}
+
+	// Mod compatibility
+	modCompileOnly(libs.trinkets)
+	modCompileOnly(libs.accessories)
 
 	shadow(libs.yumi.commons.core) {
 		isTransitive = false
