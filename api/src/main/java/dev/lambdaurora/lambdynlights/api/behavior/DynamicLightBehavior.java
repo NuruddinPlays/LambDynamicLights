@@ -9,6 +9,7 @@
 
 package dev.lambdaurora.lambdynlights.api.behavior;
 
+import net.minecraft.core.BlockPos;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Range;
 
@@ -31,24 +32,22 @@ public interface DynamicLightBehavior {
 	 *
 	 * <h3>Example - a single point emitting light</h3>
 	 * <pre><code>
-	 * public @Range(from = 0, to = 15) double lightAtPos(double x, double y, double z, double falloffRatio)
-	 * 	double dx = x - this.x;
-	 * 	double dy = y - this.y;
-	 * 	double dz = z - this.z;
+	 * public @Range(from = 0, to = 15) double lightAtPos(BlockPos pos, double falloffRatio)
+	 * 	double dx = pos.getX() - this.x + 0.5;
+	 * 	double dy = pos.getY() - this.y + 0.5;
+	 * 	double dz = pos.getZ() - this.z + 0.5;
 	 *
 	 * 	double distanceSquared = dx * dx + dy * dy + dz * dz;
 	 * 	return luminance - Math.sqrt(distanceSquared) * falloffRatio;
 	 * }
 	 * </code></pre>
 	 *
-	 * @param x the X-coordinate of the light query
-	 * @param y the Y-coordinate of the light query
-	 * @param z the Z-coordinate of the light query
+	 * @param pos the position of the light query
 	 * @param falloffRatio the rate at which the light level should fall to {@code 0} the furthest it is from the source
 	 * @return a light level at the given position, between {@code 0} and {@code 15}
 	 */
 	@Range(from = 0, to = 15)
-	double lightAtPos(double x, double y, double z, double falloffRatio);
+	double lightAtPos(BlockPos pos, double falloffRatio);
 
 	/**
 	 * {@return the bounding box of the actively light-emitting volume}

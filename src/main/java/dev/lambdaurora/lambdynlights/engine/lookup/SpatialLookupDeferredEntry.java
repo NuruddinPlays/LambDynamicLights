@@ -26,7 +26,7 @@ import org.jetbrains.annotations.NotNull;
 public record SpatialLookupDeferredEntry(int cellKey, DynamicLightBehavior behavior) implements SpatialLookupEntry {
 	@Override
 	public double getDynamicLightLevel(@NotNull BlockPos pos) {
-		double luminance = this.behavior.lightAtPos(pos.getX(), pos.getY(), pos.getZ(), 15. / DynamicLightingEngine.MAX_RADIUS);
+		double luminance = this.behavior.lightAtPos(pos, 15. / DynamicLightingEngine.MAX_RADIUS);
 		luminance = Math.max(luminance, 0);
 		return luminance;
 	}

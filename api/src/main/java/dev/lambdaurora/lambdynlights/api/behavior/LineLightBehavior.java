@@ -9,6 +9,7 @@
 
 package dev.lambdaurora.lambdynlights.api.behavior;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Range;
@@ -112,15 +113,15 @@ public class LineLightBehavior implements DynamicLightBehavior {
 	}
 
 	@Override
-	public @Range(from = 0, to = 15) double lightAtPos(double x, double y, double z, double falloffRatio) {
+	public @Range(from = 0, to = 15) double lightAtPos(BlockPos pos, double falloffRatio) {
 		Vector3d line = new Vector3d(this.endPoint).sub(this.startPoint);  // ab
-		Vector3d pointToStart = new Vector3d(x, y, z).sub(this.startPoint);  // av
+		Vector3d pointToStart = new Vector3d(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5).sub(this.startPoint);  // av
 
 		if (new Vector3d(pointToStart).dot(line) <= 0.0) {
 			return this.luminance - pointToStart.length() * falloffRatio;
 		}
 
-		Vector3d pointToEnd = new Vector3d(x, y, z).sub(this.endPoint);  // bv
+		Vector3d pointToEnd = new Vector3d(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5).sub(this.endPoint);  // bv
 
 		if (new Vector3d(pointToEnd).dot(line) >= 0.0) {
 			return this.luminance - pointToEnd.length() * falloffRatio;

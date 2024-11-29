@@ -9,6 +9,7 @@
 
 package dev.lambdaurora.lambdynlights.api.behavior;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Range;
@@ -46,14 +47,14 @@ public record BeaconLightBehavior(int x, OptionalInt y, int z, @Range(from = 0, 
 	}
 
 	@Override
-	public @Range(from = 0, to = 15) double lightAtPos(double x, double y, double z, double falloffRatio) {
-		double dx = x - this.x;
-		double dz = z - this.z;
+	public @Range(from = 0, to = 15) double lightAtPos(BlockPos pos, double falloffRatio) {
+		double dx = pos.getX() - this.x;
+		double dz = pos.getZ() - this.z;
 
 		double distanceSquared = dx * dx + dz * dz;
 
-		if (this.y.isPresent() && y < this.y.getAsInt()) {
-			double dy = y - this.y.getAsInt();
+		if (this.y.isPresent() && pos.getY() < this.y.getAsInt()) {
+			double dy = pos.getY() - this.y.getAsInt();
 			distanceSquared += dy * dy;
 		}
 
