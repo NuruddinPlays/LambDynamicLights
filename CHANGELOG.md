@@ -216,6 +216,10 @@
 
 - Fixed item frames and other "block-attached" entities not ticking properly on the integrated server.
 
+### 3.1.4
+
+- Added support for Trinkets and Accessories.
+
 ## 3.2.0
 
 - Updated to Minecraft 1.21.2.
@@ -240,6 +244,11 @@
 
 - Same changes as v3.1.3 but for 1.21.3.
 - Fixed item frames and other "block-attached" entities not ticking properly on the integrated server.
+
+### 3.2.4
+
+- Same changes as v3.1.4 but for 1.21.3.
+- Added support for Trinkets and Accessories.
 
 [SpruceUI]: https://github.com/LambdAurora/SpruceUI "SpruceUI page"
 [pridelib]: https://github.com/Queerbric/pridelib "Pridelib page"
