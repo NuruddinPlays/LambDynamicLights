@@ -9,7 +9,7 @@
 [![CurseForge](http://cf.way2muchnoise.eu/title/393442.svg)](https://www.curseforge.com/minecraft/mc-mods/lambdynamiclights)
 <!-- modrinth_exclude.end -->
 
-A dynamic lighting mod for Fabric.
+The most feature-complete dynamic lighting mod for Fabric.
 
 ## 📖 What's this mod?
 

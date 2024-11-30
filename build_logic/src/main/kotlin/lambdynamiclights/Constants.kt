@@ -10,7 +10,7 @@ object Constants {
 	const val VERSION = "4.0.0-beta.1"
 	const val JAVA_VERSION = 21
 
-	const val DESCRIPTION = "Adds dynamic lighting to Minecraft."
+	const val DESCRIPTION = "The most feature-complete dynamic lighting mod for Fabric."
 	const val API_DESCRIPTION = "Library to provide dynamic lighting to Minecraft through LambDynamicLights."
 
 	@JvmField

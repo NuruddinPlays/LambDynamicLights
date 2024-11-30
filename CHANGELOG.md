@@ -258,9 +258,9 @@
   - This affects both block and item displays.
   - If a custom brightness is defined then dynamic lighting disables itself.
 - Added a new API to define fully custom dynamic lighting of varying shapes.
-  - Added dynamic lighting to beacon beams ([#115]).
-  - Added dynamic lighting to End gateway beams ([#115]).
-  - Added dynamic lighting to guardian lasers ([#115]).
+  - Added dynamic lighting to Beacon beams ([#115]).
+  - Added dynamic lighting to End Gateway beams ([#115]).
+  - Added dynamic lighting to Guardian lasers ([#115]).
 - Added debug settings and renderers to facilitate debugging.
   - Added a debug renderer of active dynamic lighting cells.
   - Added a debug renderer to display chunk rebuilds.
