@@ -99,8 +99,7 @@ Using this mod is very simple!
 
 Install it in your mods folder along with [Fabric API] and [ModMenu], (and [Sodium] if wanted for better performances).
 
-You will notice nothing at first but if you go into the video options or into the settings screen of the mod via [ModMenu], you will notice an option called Dynamic Lights which is by default off, choose the wanted configuration and enjoy!
-You can also configure the mod by editing the file in `config/lambdynlights.toml`.
+It will work as-is. If you want, you can configure the mod through its settings screen by heading to the video settings or via [ModMenu].
 
 Need help? Come check out [my Discord server][LambdAurora Discord].
 
