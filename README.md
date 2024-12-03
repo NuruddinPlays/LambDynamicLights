@@ -23,7 +23,8 @@ You can see in the darkness thanks to your torch now!
 This mod adds dynamic lights to Minecraft. Dynamic lights are lights created by an entity holding an
 item which makes light as a block, or created by an entity on fire, etc.
 
-[Trailer](https://www.youtube.com/embed/xew0s2TwZ84?wmode=transparent)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xew0s2TwZ84" title="Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
 
 Searching other mods to replace OptiFine? [Check out this list!](https://optifine.alternatives.lambdaurora.dev/)
 
